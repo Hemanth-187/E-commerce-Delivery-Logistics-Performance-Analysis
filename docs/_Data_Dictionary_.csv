@@ -1,0 +1,54 @@
+﻿Column Name,Observed Data Type,Recommended Data Type,Description (provided field guide),Non-missing Distinct Values,Missing Count,Missing Percentage,Example Values (up to 3),Analytical Use / Validation Notes
+Type,object,Text/category,Type of transaction made,4,0,0.00%,DEBIT | TRANSFER | CASH,Transaction/payment type; may help describe order transactions.
+Days for shipping (real),int64,Integer,Actual shipping days of the purchased product,7,0,0.00%,3 | 5 | 4,Actual shipping duration; compare across shipping modes and delivery status.
+Days for shipment (scheduled),int64,Integer,Days of scheduled delivery of the purchased product,4,0,0.00%,4 | 1 | 2,Scheduled shipping duration; compare with actual duration.
+Benefit per order,float64,Numeric (decimal),Earnings per order placed,21998,0,0.00%,91.25 | -249.0899963 | -247.7799988,Order-level benefit/profit-related measure; confirm business definition before interpretation.
+Sales per customer,float64,Numeric (decimal),Total sales per customer made per customer,2927,0,0.00%,314.6400146 | 311.3599854 | 309.7200012,Sales value associated with customer/order record; check aggregation grain before summing.
+Delivery Status,object,Text/category,"Delivery status of orders: Advance shipping , Late delivery , Shipping canceled , Shipping on time",4,0,0.00%,Advance shipping | Late delivery | Shipping on time,Primary delivery outcome category.
+Late_delivery_risk,int64,Integer,"Categorical variable that indicates if sending is late (1), it is not late (0).",2,0,0.00%,0 | 1,Binary late-delivery indicator; validate against delivery status and duration fields.
+Category Id,int64,Integer,Product category code,51,0,0.00%,73 | 17 | 29,Product category identifier.
+Category Name,object,Text/category,Description of the product category,50,0,0.00%,Sporting Goods | Cleats | Shop By Sport,Product category dimension.
+Customer City,object,Text/category,City where the customer made the purchase,563,0,0.00%,Caguas | San Jose | Los Angeles,Customer geography.
+Customer Country,object,Text/category,Country where the customer made the purchase,2,0,0.00%,Puerto Rico | EE. UU.,Customer geography.
+Customer Email,object,Text/category,Customer's email,1,0,0.00%,XXXXXXXXX,Customer contact field; appears masked/placeholder-like in sample. Avoid exposing personal data.
+Customer Fname,object,Text/category,Customer name,782,0,0.00%,Cally | Irene | Gillian,Customer name field; personal data. Avoid unnecessary use in analysis.
+Customer Id,int64,Integer,Customer ID,20652,0,0.00%,20755 | 19492 | 19491,Customer identifier; use for customer-level distinct counts.
+Customer Lname,object,Text/category,Customer lastname,1109,8,0.00%,Holloway | Luna | Maldonado,Customer name field; personal data. Avoid unnecessary use in analysis. Missing values require documented handling (8 rows; 0.00%).
+Customer Password,object,Text/category,Masked customer key,1,0,0.00%,XXXXXXXXX,Sensitive credential-like field; do not use in analysis or publish in repository.
+Customer Segment,object,Text/category,"Types of Customers: Consumer , Corporate , Home Office",3,0,0.00%,Consumer | Home Office | Corporate,Customer segment dimension.
+Customer State,object,Text/category,State to which the store where the purchase is registered belongs,46,0,0.00%,PR | CA | NY,Customer geography.
+Customer Street,object,Text/category,Street to which the store where the purchase is registered belongs,7458,0,0.00%,5365 Noble Nectar Island | 2679 Rustic Loop | 8510 Round Bear Gate,Detailed customer address; personal data. Exclude from analysis outputs unless strictly needed.
+Customer Zipcode,float64,Numeric (decimal),Customer Zipcode,995,3,0.00%,725.0 | 95125.0 | 90027.0,"Customer postal code; geography, with a few missing values. Missing values require documented handling (3 rows; 0.00%)."
+Department Id,int64,Integer,Department code of store,11,0,0.00%,2 | 4 | 5,Department identifier.
+Department Name,object,Text/category,Department name of store,11,0,0.00%,Fitness | Apparel | Golf,Department dimension.
+Latitude,float64,Numeric (decimal),Latitude corresponding to location of store,11250,0,0.00%,18.2514534 | 18.27945137 | 37.29223251,Coordinate field; verify whether it represents customer or order location before geographic interpretation.
+Longitude,float64,Numeric (decimal),Longitude corresponding to location of store,4487,0,0.00%,-66.03705597 | -66.0370636 | -121.881279,Coordinate field; verify whether it represents customer or order location before geographic interpretation.
+Market,object,Text/category,"Market to where the order is delivered : Africa , Europe , LATAM , Pacific Asia , USCA",5,0,0.00%,Pacific Asia | USCA | Africa,Market dimension for comparisons.
+Order City,object,Text/category,Destination city of the order,3597,0,0.00%,Bekasi | Bikaner | Townsville,Destination/order city dimension.
+Order Country,object,Text/category,Destination country of the order,164,0,0.00%,Indonesia | India | Australia,Destination/order country dimension.
+Order Customer Id,int64,Integer,Customer order code,20652,0,0.00%,20755 | 19492 | 19491,Customer identifier associated with an order; compare with Customer Id.
+order date (DateOrders),object,Date/time (stored as text; parse to datetime),Date on which the order is made,65752,0,0.00%,1/31/2018 22:56 | 1/13/2018 12:27 | 1/13/2018 12:06,Order timestamp; parse consistently to datetime.
+Order Id,int64,Integer,Order code,65752,0,0.00%,77202 | 75939 | 75938,Order identifier; repeats may be valid because rows can represent order items.
+Order Item Cardprod Id,int64,Integer,Product code generated through the RFID reader,118,0,0.00%,1360 | 365 | 627,Product/card identifier on an order item.
+Order Item Discount,float64,Numeric (decimal),Order item discount value,1017,0,0.00%,13.10999966 | 16.38999939 | 18.03000069,Discount amount on an order item.
+Order Item Discount Rate,float64,Numeric (decimal),Order item discount percentage,18,0,0.00%,0.039999999 | 0.050000001 | 0.059999999,Discount rate on an order item.
+Order Item Id,int64,Integer,Order item code,180519,0,0.00%,180517 | 179254 | 179253,Order-item identifier; dataset shows one distinct value per row.
+Order Item Product Price,float64,Numeric (decimal),Price of products without discount,75,0,0.00%,327.75 | 59.99000168 | 39.99000168,Unit/product price on an order item.
+Order Item Profit Ratio,float64,Numeric (decimal),Order Item Profit Ratio,162,0,0.00%,0.289999992 | -0.800000012 | 0.079999998,Profit ratio field; verify calculation and interpretation.
+Order Item Quantity,int64,Integer,Number of products per order,5,0,0.00%,1 | 2 | 3,Quantity on an order item.
+Sales,float64,Numeric (decimal),Value in sales,193,0,0.00%,327.75 | 119.9800034 | 79.98000336,Sales value; define aggregation carefully at order-item grain.
+Order Item Total,float64,Numeric (decimal),Total amount per order,2927,0,0.00%,314.6400146 | 311.3599854 | 309.7200012,Order-item total after relevant adjustments; verify definition before aggregation.
+Order Profit Per Order,float64,Numeric (decimal),Order Profit Per Order,21998,0,0.00%,91.25 | -249.0899963 | -247.7799988,Profit-related value; confirm grain and definition before summing.
+Order Region,object,Text/category,"Region of the world where the order is delivered :  Southeast Asia ,South Asia ,Oceania ,Eastern Asia, West Asia , West of USA , US Center , West Africa, Central Africa ,North Africa ,Western Europe ,Northern , Caribbean , South America ,East Africa ,Southern Europe , East of USA ,Canada ,Southern Africa , Central Asia ,  Europe , Central America, Eastern Europe , South of  USA",23,0,0.00%,Southeast Asia | South Asia | Oceania,Region dimension for performance comparisons.
+Order State,object,Text/category,State of the region where the order is delivered,1089,0,0.00%,Java Occidental | Rajast�n | Queensland,Order/destination state or province.
+Order Status,object,Text/category,"Order Status : COMPLETE , PENDING , CLOSED , PENDING_PAYMENT ,CANCELED , PROCESSING ,SUSPECTED_FRAUD ,ON_HOLD ,PAYMENT_REVIEW",9,0,0.00%,COMPLETE | PENDING | CLOSED,Order lifecycle status; standardize and summarize categories.
+Order Zipcode,float64,Numeric (decimal),No matching description was found in the supplied field-description CSV; confirm with the dataset owner.,609,155679,86.24%,99301.0 | 90049.0 | 94110.0,"Order postal code; very high missingness, use only if appropriate. Missing values require documented handling (155,679 rows; 86.24%)."
+Product Card Id,int64,Integer,Product code,118,0,0.00%,1360 | 365 | 627,Product/card identifier.
+Product Category Id,int64,Integer,Product category code,51,0,0.00%,73 | 17 | 29,Product category identifier; compare with Category Id.
+Product Description,float64,Numeric (decimal),Product Description,0,180519,100.00%,,Product description field; entirely missing in this dataset. IMPORTANT: column is entirely missing in the supplied dataset.
+Product Image,object,Text/category,Link of visit and purchase of the product,118,0,0.00%,http://images.acmesports.sports/Smart+watch  | http://images.acmesports.sports/Perfect+Fitness+Perfect+Rip+Deck | http://images.acmesports.sports/Under+Armour+Girls%27+Toddler+Spine+Surge+Running+Shoe,Product image URL; usually not needed for logistics analysis.
+Product Name,object,Text/category,Product Name,118,0,0.00%,Smart watch  | Perfect Fitness Perfect Rip Deck | Under Armour Girls' Toddler Spine Surge Runni,Product name dimension.
+Product Price,float64,Numeric (decimal),Product Price,75,0,0.00%,327.75 | 59.99000168 | 39.99000168,Product price; verify relationship to order-item price.
+Product Status,int64,Integer,"Status of the product stock :If it is 1 not available , 0 the product is available",1,0,0.00%,0,Product status field; only one distinct value in this dataset.
+shipping date (DateOrders),object,Date/time (stored as text; parse to datetime),No matching description was found in the supplied field-description CSV; confirm with the dataset owner.,63701,0,0.00%,2/3/2018 22:56 | 1/18/2018 12:27 | 1/17/2018 12:06,Shipping timestamp; parse consistently and validate relative to order date.
+Shipping Mode,object,Text/category,"The following shipping modes are presented : Standard Class , First Class , Second Class , Same Day",4,0,0.00%,Standard Class | First Class | Second Class,Shipping method dimension for duration comparisons.
