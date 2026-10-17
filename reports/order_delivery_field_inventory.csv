@@ -1,0 +1,10 @@
+field,available,data_type,missing_count,missing_percent,unique_values,notes
+Order Id,True,int64,0,0.0,65752,Repeated order IDs may represent multiple order items.
+Order Item Id,True,int64,0,0.0,180519,Repeated order IDs may represent multiple order items.
+Order Status,True,str,0,0.0,9,
+order date (DateOrders),True,str,0,0.0,65752,Date field; parsing and chronological order are checked.
+shipping date (DateOrders),True,str,0,0.0,63701,Date field; parsing and chronological order are checked.
+Days for shipping (real),True,int64,0,0.0,7,Actual shipping duration in days; not necessarily end-to-end delivery time.
+Days for shipment (scheduled),True,int64,0,0.0,4,Scheduled shipping duration in days.
+Delivery Status,True,str,0,0.0,4,
+Late_delivery_risk,True,int64,0,0.0,2,Risk indicator; inspect its relationship to Delivery Status separately.
