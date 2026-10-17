@@ -1,0 +1,22 @@
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Secrets and local files
+.env
+.DS_Store
+Thumbs.db
+
+# Keep datasets out of GitHub by default
+data/raw/*
+data/interim/*
+data/processed/*
+
+# Track folder documentation
+!data/raw/README.md
+!data/interim/README.md
+!data/processed/README.md
