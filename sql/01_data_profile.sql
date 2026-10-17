@@ -1,0 +1,3 @@
+-- Starter template: adapt table and column names after importing the dataset.
+-- SELECT COUNT(*) AS row_count FROM supply_chain;
+-- SELECT COUNT(DISTINCT order_id) AS distinct_orders FROM supply_chain;
