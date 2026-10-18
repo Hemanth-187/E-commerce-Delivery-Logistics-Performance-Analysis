@@ -1,0 +1,17 @@
+check,field,issue_count,rows_checked,issue_percent,interpretation
+Missing or unparseable order dates,order date (DateOrders),0,180519,0.0,Review rows where the order date is unavailable or cannot be parsed.
+Missing or unparseable shipping dates,shipping date (DateOrders),0,180519,0.0,Review rows where the shipping date is unavailable or cannot be parsed.
+Shipping date before order date,shipping date (DateOrders) vs order date (DateOrders),0,180519,0.0,Potential chronology issue; investigate before deciding whether to exclude.
+Missing or nonnumeric duration,Days for shipping (real),0,180519,0.0,Duration is missing or could not be converted to a number.
+Negative duration,Days for shipping (real),0,180519,0.0,Negative durations are potential data-quality issues.
+Zero duration,Days for shipping (real),5080,180519,2.8141,Flagged for review only; zero may be valid under the dataset's conventions.
+Missing or nonnumeric duration,Days for shipment (scheduled),0,180519,0.0,Duration is missing or could not be converted to a number.
+Negative duration,Days for shipment (scheduled),0,180519,0.0,Negative durations are potential data-quality issues.
+Zero duration,Days for shipment (scheduled),9737,180519,5.3939,Flagged for review only; zero may be valid under the dataset's conventions.
+Unexpected delivery status,Delivery Status,0,180519,0.0,Expected labels are based on the four observed delivery-status categories.
+Risk flag missing or nonnumeric,Late_delivery_risk,0,180519,0.0,Review rows where the risk flag is unavailable or nonnumeric.
+Risk flag outside expected 0/1 values,Late_delivery_risk,0,180519,0.0,This dataset's observed risk flag uses 0 and 1.
+Canceled delivery with risk flag 1,Delivery Status + Late_delivery_risk,0,180519,0.0,Review this combination; do not assume it is invalid without business rules.
+Late delivery with risk flag 0,Delivery Status + Late_delivery_risk,0,180519,0.0,Review potential disagreement between delivery label and risk flag.
+Non-late delivery with risk flag 1,Delivery Status + Late_delivery_risk,0,180519,0.0,Review potential disagreement between delivery label and risk flag.
+Calendar-day difference vs reported actual duration mismatch,"order date (DateOrders), shipping date (DateOrders), Days for shipping (real)",0,180519,0.0,Review mismatches; date-based calendar days may differ from the source's duration definition.
