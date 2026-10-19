@@ -1,0 +1,58 @@
+Metric,Before cleaning,After cleaning
+Rows,180519,180519
+Columns,53,53
+Exact duplicate rows,0,0
+Total missing values,336209,336209
+Missing values: Type,0,0
+Missing values: Days for shipping (real),0,0
+Missing values: Days for shipment (scheduled),0,0
+Missing values: Benefit per order,0,0
+Missing values: Sales per customer,0,0
+Missing values: Delivery Status,0,0
+Missing values: Late_delivery_risk,0,0
+Missing values: Category Id,0,0
+Missing values: Category Name,0,0
+Missing values: Customer City,0,0
+Missing values: Customer Country,0,0
+Missing values: Customer Email,0,0
+Missing values: Customer Fname,0,0
+Missing values: Customer Id,0,0
+Missing values: Customer Lname,8,8
+Missing values: Customer Password,0,0
+Missing values: Customer Segment,0,0
+Missing values: Customer State,0,0
+Missing values: Customer Street,0,0
+Missing values: Customer Zipcode,3,3
+Missing values: Department Id,0,0
+Missing values: Department Name,0,0
+Missing values: Latitude,0,0
+Missing values: Longitude,0,0
+Missing values: Market,0,0
+Missing values: Order City,0,0
+Missing values: Order Country,0,0
+Missing values: Order Customer Id,0,0
+Missing values: order date (DateOrders),0,0
+Missing values: Order Id,0,0
+Missing values: Order Item Cardprod Id,0,0
+Missing values: Order Item Discount,0,0
+Missing values: Order Item Discount Rate,0,0
+Missing values: Order Item Id,0,0
+Missing values: Order Item Product Price,0,0
+Missing values: Order Item Profit Ratio,0,0
+Missing values: Order Item Quantity,0,0
+Missing values: Sales,0,0
+Missing values: Order Item Total,0,0
+Missing values: Order Profit Per Order,0,0
+Missing values: Order Region,0,0
+Missing values: Order State,0,0
+Missing values: Order Status,0,0
+Missing values: Order Zipcode,155679,155679
+Missing values: Product Card Id,0,0
+Missing values: Product Category Id,0,0
+Missing values: Product Description,180519,180519
+Missing values: Product Image,0,0
+Missing values: Product Name,0,0
+Missing values: Product Price,0,0
+Missing values: Product Status,0,0
+Missing values: shipping date (DateOrders),0,0
+Missing values: Shipping Mode,0,0
