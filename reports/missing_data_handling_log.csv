@@ -1,0 +1,5 @@
+﻿Column_Name,Missing_Count,Handling_Rule,Action_Taken
+Customer Lname,8,Flag for review; do not guess the name,Missing values identified; no values changed
+Customer Zipcode,3,Flag for review; do not guess the zipcode,Missing values identified; no values changed
+Order Zipcode,155679,Record as missing; review before geographic analysis,Missing values identified; no values changed
+Product Description,180519,Keep missing; do not invent descriptions,Missing values identified; no values changed
