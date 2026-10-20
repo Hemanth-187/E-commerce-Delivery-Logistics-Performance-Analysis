@@ -1,0 +1,11 @@
+﻿,Count,Result
+Missing values in Delivery Status,0,PASS
+Missing values in Days for shipping (real),0,PASS
+Missing values in shipping date (DateOrders),0,PASS
+Missing values in order date (DateOrders),0,PASS
+Missing values in Shipping Mode,0,PASS
+Missing values in Order Id,0,PASS
+Unparseable order dates,0,PASS
+Unparseable shipping dates,0,PASS
+Shipping date before order date,0,PASS
+CANCELED orders not labeled Shipping canceled,0,PASS
