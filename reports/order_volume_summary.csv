@@ -1,0 +1,11 @@
+Metric,Value
+Dataset rows,180519
+Rows with valid order date and order ID,180519
+Rows with invalid or missing order date or order ID,0
+Unique orders in valid rows,65752
+First order date,2015-01-01 00:00:00
+Last order date,2018-01-31 23:38:00
+Month with most unique orders,2017-12
+Highest monthly unique-order count,2124
+Year with most unique orders,2017
+Highest yearly unique-order count,21866
