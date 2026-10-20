@@ -1,0 +1,10 @@
+Analysis,Result
+Total records,180519
+Missing actual durations,0
+Average delivery duration,3.50 days
+Median delivery duration,3 days
+Maximum delivery duration,6 days
+IQR outliers,0
+Delivered later than scheduled,103400
+Delivered on schedule,33753
+Delivered earlier than scheduled,43366
