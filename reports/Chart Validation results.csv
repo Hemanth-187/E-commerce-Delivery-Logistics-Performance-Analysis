@@ -1,0 +1,5 @@
+Check,Expected,Actual,Passed,Notes
+Raw and cleaned row counts match,180519,180519,TRUE,Matching row counts do not prove every value is preserved.
+Raw and cleaned column counts match,53,53,TRUE,
+Monthly order counts reconcile,65752,65752,TRUE,Each order is assigned to one month.
+Yearly order counts reconcile,65752,65752,TRUE,Each order is assigned to one year.
